@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --logo: #0030B5;
+    --blue-primary: #1363DF;
+    --black-text: #06283D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+    color: #06283D;
+}
+
+body {
+    background: linear-gradient(135deg, #FFF, #DFF6FF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+a {
+    text-decoration-line: none !important;
+}
+
+.navbar {
+    margin: 2rem 8rem; 
+}
+
+.navbar #nav-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    letter-spacing: .1em;
+    color: var(--logo);
+    user-select: none;
+    cursor: pointer;
+}
+
+.navbar #back-to-event {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    background-color: var(--blue-primary);
+}
+
+#contact-us h1 {
+    border-bottom: 2px solid grey;
+    font-weight: 900;
+    letter-spacing: .1em;
+    font-size: 48px;
+    color: var(--black-text);
+}
+
+#contact-us .card-body .card-link:hover {
+    transition: .25s;
+    background-color: var(--blue-primary);
+    color: #fff !important;
+    border-color: var(--blue-primary) !important;
+}

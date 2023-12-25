@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --logo: #0030B5;
+    --blue-primary: #1363DF;
+    --black-text: #06283D;
+}
+
+*, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--black-text);
+}
+
+body {
+    background: linear-gradient(135deg, #FFF, #DFF6FF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* NAVBAR */
+.navbar {
+    margin: 2rem 8rem; 
+}
+
+.navbar #nav-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    letter-spacing: .1em;
+    color: var(--logo);
+    user-select: none;
+    cursor: pointer;
+}
+
+.navbar #get-started {
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    background-color: var(--blue-primary);
+}
+
+/* HERO */
+#hero .row {
+    margin-top: 7rem;
+    gap: 5em;
+}
+
+#hero #hero-desc #welcome-to {
+    font-size: 64px;
+    letter-spacing: .1em;
+    animation: welcome-to 1s ease-in-out;
+}
+@keyframes welcome-to {
+    from {letter-spacing: .2em;}
+    to {letter-spacing: .1em;}
+}
+
+#hero #hero-desc #pf {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 64px;
+    letter-spacing: .3em;
+    color: var(--logo);
+    animation: pf 1s ease-in-out;
+}
+@keyframes pf {
+    from {letter-spacing: .2em;}
+    to {letter-spacing: .3em;}
+}
+
+#hero #hero-desc p {
+    letter-spacing: .05em;
+    margin-top: 1.5em;
+    animation: p 1s ease-in-out;
+}
+@keyframes p {
+    from {line-height: .5em; opacity: 0;}
+    to {line-height: 1.5em; opacity: 1;}
+}
+
+#hero #hero-img {
+    mix-blend-mode: darken;
+    user-select: none;
+}
+
+/* RESPPONSIVE */
+@media only screen and (max-width: 1400px) {
+    #hero .row {
+        margin-top: 13rem;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    #hero {
+        text-align: center;
+    }
+    #hero #hero-img {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) { 
+    #navbar {
+        margin-inline: 1rem; 
+    }
+    #hero #hero-desc #header-text #welcome-to {
+        font-size: 44px;
+    }
+    #hero #hero-desc #header-text #pf {
+        font-size: 44px;
+    }
+    #hero #hero-desc p {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 476px) {
+    #hero #hero-desc #header-text #welcome-to {
+        font-size: 36px;
+    }
+    #hero #hero-desc #header-text #pf {
+        font-size: 36px;
+    }
+    #hero #hero-desc p {
+        font-size: 16px;
+    }
+}

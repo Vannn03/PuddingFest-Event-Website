@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --logo: #0030B5;
+    --blue-primary: #1363DF;
+    --black-text: #06283D;
+}
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+    scroll-behavior: smooth;
+    color: var(--black-text);
+}
+
+body {
+    background: linear-gradient(135deg, #FFF, #DFF6FF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* NAVBAR */
+header {
+    margin: 2.5rem 8rem;
+}
+
+header nav #nav-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 800;
+    letter-spacing: .1em;
+    color: var(--logo);
+    user-select: none;
+    cursor: pointer;
+    border-right: 1px solid grey;
+    padding-right: 2rem;
+}
+
+header nav .nav-link {
+    animation: nav-links 1s ease;
+}
+@keyframes nav-links {
+    from {margin-left: -30px; opacity: 0;}
+    to {margin-right: 0px; opacity: 1;}
+}
+
+header nav .nav-link:hover {
+    border-bottom: 2px solid var(--blue-primary);
+}
+
+header #contact-us {
+    background-color: var(--blue-primary);
+    letter-spacing: 0.1em;
+}
+
+/* CAROUSEL */
+#carousel-imgs {
+    animation: carousel 1s ease;
+}
+@keyframes carousel {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* SERIES */
+#series-sec {
+    margin-block: 5rem;
+}
+
+#series-sec .card {
+    box-shadow: 0px 5px 30px grey;
+}
+
+#series-sec img {
+    max-height: 350px;
+}
+
+#series-sec p {
+    color: var(--black-text) !important;
+}
+
+/* TIMELINE */
+#timeline-sec {
+    margin-bottom: 5rem;
+}
+
+#timeline-sec .dropdown button {
+    border-color: var(--blue-primary);
+    color: var(--blue-primary);
+    letter-spacing: .1em;
+}
+
+#timeline-sec i {
+    color: var(--blue-primary);
+}
+
+#timeline-sec a {
+    font-size: 18px;
+}
+
+#timeline-sec .dropdown-item {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#timeline-sec .dropdown-item:hover {
+    background-color: var(--blue-primary);
+    color: #FFF;
+}
+
+#timeline-sec #timeline-table {
+    border-top: 1px solid var(--black-text);
+}
+
+#timeline-sec #timeline-table th {
+    letter-spacing: .1em;
+    background-color: var(--blue-primary);
+}
+/* REGISTRATION */
+#regis-sec {
+    background-color: var(--black-text);
+    padding: 2rem 8rem;
+}
+
+#regis-sec .row {
+    gap: 5rem;
+}
+
+#regis-sec #regis-desc h1 {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+#regis-sec #regis-desc #credit {
+    font-family: 'Courier New', sans-serif;
+    margin-bottom: -.3rem;
+}
+
+#regis-sec form button {
+    background-color: var(--blue-primary);
+    letter-spacing: .1em;
+}
+
+#regis-sec .invalid-feedback {
+    color: tomato;
+}
+
+#regis-sec .valid-feedback {
+    color: lightgreen;
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 956px) {
+    header nav #nav-logo {
+        border-right: none;
+    }
+    header nav .nav-link {
+        display: none;
+    }
+    header {
+        margin-inline: 1rem; 
+    }
+    #series-sec h5 {
+        font-size: 24px;
+    } 
+    #series-sec p {
+        font-size: 16px;
+    }
+    #regis-sec .row {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    #regis-sec .invalid-feedback, .valid-feedback {
+        text-align: left;
+    }
+    #regis-sec #regis-desc #credit {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    #series-sec .row {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #timeline-sec #timeline-table th {
+        font-size: 24px;
+    }
+    #timeline-sec #timeline-table tr {
+        font-size: 16px;
+    }
+    #regis-sec {
+        padding-inline: 1rem; 
+    }
+    #regis-sec #regis-desc h1 {
+        font-size: 48px;
+    }
+    
+    #regis-sec #regis-desc p {
+        font-size: 20px;
+    }
+}
