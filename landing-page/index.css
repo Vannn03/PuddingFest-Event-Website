@@ -101,13 +101,13 @@ body {
     }
 }
 @media only screen and (max-width: 768px) { 
-    #navbar {
+    .navbar {
         margin-inline: 1rem; 
     }
-    #hero #hero-desc #header-text #welcome-to {
+    #hero #hero-desc #welcome-to {
         font-size: 44px;
     }
-    #hero #hero-desc #header-text #pf {
+    #hero #hero-desc #pf {
         font-size: 44px;
     }
     #hero #hero-desc p {
@@ -115,10 +115,13 @@ body {
     }
 }
 @media only screen and (max-width: 476px) {
-    #hero #hero-desc #header-text #welcome-to {
+    #hero .row {
+        margin-top: 7rem;
+    }
+    #hero #hero-desc #welcome-to {
         font-size: 36px;
     }
-    #hero #hero-desc #header-text #pf {
+    #hero #hero-desc #pf {
         font-size: 36px;
     }
     #hero #hero-desc p {
