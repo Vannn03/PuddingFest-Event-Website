@@ -166,12 +166,6 @@ header #contact-us {
     header {
         margin-inline: 1rem; 
     }
-    #series-sec h5 {
-        font-size: 24px;
-    } 
-    #series-sec p {
-        font-size: 16px;
-    }
     #regis-sec .row {
         display: flex;
         flex-direction: column;
@@ -192,20 +186,26 @@ header #contact-us {
         flex-direction: column;
         gap: 2rem;
     }
+    #series-sec h5 {
+        font-size: 24px !important;
+    } 
+    #series-sec p {
+        font-size: 16px !important;
+    }
     #timeline-sec #timeline-table th {
-        font-size: 24px;
+        font-size: 24px !important;
     }
     #timeline-sec #timeline-table tr {
-        font-size: 16px;
+        font-size: 16px !important;
     }
     #regis-sec {
         padding-inline: 1rem; 
     }
     #regis-sec #regis-desc h1 {
-        font-size: 48px;
+        font-size: 48px !important;
     }
     
     #regis-sec #regis-desc p {
-        font-size: 20px;
+        font-size: 20px !important;
     }
 }

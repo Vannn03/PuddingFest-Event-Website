@@ -111,7 +111,7 @@ body {
         font-size: 44px;
     }
     #hero #hero-desc p {
-        font-size: 20px;
+        font-size: 20px !important;
     }
 }
 @media only screen and (max-width: 476px) {
@@ -119,12 +119,12 @@ body {
         margin-top: 7rem;
     }
     #hero #hero-desc #welcome-to {
-        font-size: 36px;
+        font-size: 32px;
     }
     #hero #hero-desc #pf {
-        font-size: 36px;
+        font-size: 32px;
     }
     #hero #hero-desc p {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 }
