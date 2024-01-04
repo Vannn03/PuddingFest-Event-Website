@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#nav-logo").click(function (e) { 
         e.preventDefault();
-        window.location.href = "../landing-page/index.html";
+        window.location.href = "../index.html";
     });
     $("#te-table").hide();
     $("#te-menu").click(function (e) { 
