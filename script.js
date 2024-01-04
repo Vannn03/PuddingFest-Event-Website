@@ -5,6 +5,6 @@ $(document).ready(function () {
     });
     $("#get-started").click(function (e) { 
         e.preventDefault();
-        window.location.href = "../event-page/event.html";
+        window.location.href = "event.html";
     });
 });

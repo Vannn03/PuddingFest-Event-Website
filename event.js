@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $("#nav-logo").click(function (e) { 
         e.preventDefault();
-        window.location.href = "../index.html";
+        window.location.href = "index.html";
     });
     $("#te-table").hide();
     $("#te-menu").click(function (e) { 
@@ -16,7 +16,7 @@ $(document).ready(function () {
     });
     $("#contact-us").click(function (e) { 
         e.preventDefault();
-        window.location.href = "../contact-page/contact.html";
+        window.location.href = "contact.html";
     });
 });
 
