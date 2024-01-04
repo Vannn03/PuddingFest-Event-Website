@@ -1,9 +1,9 @@
 $(document).ready(function () {
-    $("#nav-logo").click(function (e) { 
+    $("#nav-logo").click(function (e) {
         e.preventDefault();
         window.location.href = "../index.html";
     });
-    $("#back-to-event").click(function (e) { 
+    $("#back-to-event").click(function (e) {
         e.preventDefault();
         window.location.href = "../event-page/event.html";
     });

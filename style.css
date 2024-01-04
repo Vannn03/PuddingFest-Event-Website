@@ -8,7 +8,8 @@
     --black-text: #06283D;
 }
 
-*, html {
+*,
+html {
     margin: 0;
     padding: 0;
     font-family: 'Rajdhani', sans-serif;
@@ -25,7 +26,7 @@ body {
 
 /* NAVBAR */
 .navbar {
-    margin: 2rem 8rem; 
+    margin: 2rem 8rem;
 }
 
 .navbar #nav-logo {
@@ -54,9 +55,15 @@ body {
     letter-spacing: .1em;
     animation: welcome-to 1s ease-in-out;
 }
+
 @keyframes welcome-to {
-    from {letter-spacing: .2em;}
-    to {letter-spacing: .1em;}
+    from {
+        letter-spacing: .2em;
+    }
+
+    to {
+        letter-spacing: .1em;
+    }
 }
 
 #hero #hero-desc #pf {
@@ -66,9 +73,15 @@ body {
     color: var(--logo);
     animation: pf 1s ease-in-out;
 }
+
 @keyframes pf {
-    from {letter-spacing: .2em;}
-    to {letter-spacing: .3em;}
+    from {
+        letter-spacing: .2em;
+    }
+
+    to {
+        letter-spacing: .3em;
+    }
 }
 
 #hero #hero-desc p {
@@ -76,9 +89,17 @@ body {
     margin-top: 1.5em;
     animation: p 1s ease-in-out;
 }
+
 @keyframes p {
-    from {line-height: .5em; opacity: 0;}
-    to {line-height: 1.5em; opacity: 1;}
+    from {
+        line-height: .5em;
+        opacity: 0;
+    }
+
+    to {
+        line-height: 1.5em;
+        opacity: 1;
+    }
 }
 
 #hero #hero-img {
@@ -92,38 +113,48 @@ body {
         margin-top: 13rem;
     }
 }
+
 @media only screen and (max-width: 1200px) {
     #hero {
         text-align: center;
     }
+
     #hero #hero-img {
         display: none;
     }
 }
-@media only screen and (max-width: 768px) { 
+
+@media only screen and (max-width: 768px) {
     .navbar {
-        margin-inline: 1rem; 
+        margin-inline: 1rem;
     }
+
     #hero #hero-desc #welcome-to {
         font-size: 44px;
     }
+
     #hero #hero-desc #pf {
         font-size: 44px;
     }
+
     #hero #hero-desc p {
         font-size: 20px !important;
     }
 }
+
 @media only screen and (max-width: 476px) {
     #hero .row {
         margin-top: 7rem;
     }
+
     #hero #hero-desc #welcome-to {
         font-size: 32px;
     }
+
     #hero #hero-desc #pf {
         font-size: 32px;
     }
+
     #hero #hero-desc p {
         font-size: 16px !important;
     }

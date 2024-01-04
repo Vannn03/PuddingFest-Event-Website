@@ -1,37 +1,37 @@
 $(document).ready(function () {
-    $("#nav-logo").click(function (e) { 
+    $("#nav-logo").click(function (e) {
         e.preventDefault();
         window.location.href = "../index.html";
     });
     $("#te-table").hide();
-    $("#te-menu").click(function (e) { 
+    $("#te-menu").click(function (e) {
         e.preventDefault();
         $("#vc-table").hide();
         $("#te-table").show();
     });
-    $("#vc-menu").click(function (e) { 
+    $("#vc-menu").click(function (e) {
         e.preventDefault();
         $("#te-table").hide();
         $("#vc-table").show();
     });
-    $("#contact-us").click(function (e) { 
+    $("#contact-us").click(function (e) {
         e.preventDefault();
         window.location.href = "../contact-page/contact.html";
     });
 });
 
-// Validate input
+// Validate inputs
 const email = document.querySelector("#email");
 
 function checkEmail() {
-  let value = document.getElementById("email").value;  
-  const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let value = document.getElementById("email").value;
+    const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (!value.match(validRegex)) {
         email.classList.remove("is-valid");
         email.classList.add("is-invalid");
         $("#email").css("borderColor", "tomato");
-        
+
     } else {
         email.classList.add("is-valid");
         email.classList.remove("is-invalid");
@@ -42,7 +42,7 @@ function checkEmail() {
 const name = document.querySelector("#name");
 
 function checkName() {
-  let value = document.getElementById("name").value;    
+    let value = document.getElementById("name").value;
     if (value.length < 3) {
         name.classList.remove("is-valid");
         name.classList.add("is-invalid");
@@ -55,7 +55,7 @@ function checkName() {
 const phone = document.querySelector("#phone");
 
 function checkPhone() {
-  let value = document.getElementById("phone").value;    
+    let value = document.getElementById("phone").value;
     if (!value.startsWith("08") || value.length < 10 || value.length > 14) {
         phone.classList.remove("is-valid");
         phone.classList.add("is-invalid");
@@ -74,7 +74,7 @@ const firebaseConfig = {
     messagingSenderId: "174671851409",
     appId: "1:174671851409:web:2bef96c984cf4fd5e03430"
 };
-    
+
 // Inisialisasi firebase
 firebase.initializeApp(firebaseConfig);
 // Menggunakan firestore
@@ -82,7 +82,7 @@ const db = firebase.firestore()
 // Referensi dokumen yang ada di firestore
 const formCollection = db.collection("Registration_Data")
 const form = document.getElementById("form")
- 
+
 // Submit validation
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -93,7 +93,7 @@ form.addEventListener('submit', e => {
     const phone = document.getElementById("phone")
     let invalidPhone = phone.classList.contains("is-invalid");
     if (invalidEmail || invalidName || invalidPhone) {
-       console.log("Error")
+        console.log("Error")
     }
     else {
         const formData = new FormData(form)
@@ -101,27 +101,27 @@ form.addEventListener('submit', e => {
         const fullName = formData.get("name")
         const phoneNum = formData.get("phone")
         const eventParticipation = formData.get("event")
-       
+
         formCollection.add({
             emailAddress,
             fullName,
             phoneNum,
             eventParticipation
         })
-   
+
         // AJAX
         function postData() {
             fetch("https://jsonplaceholder.typicode.com/posts", {
                 method: "POST",
                 headers: {
-                   "Content-Type": "application/json"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify(formCollection)
             })
-            .then(response => response.json())
-       
+                .then(response => response.json())
+
             postData()
-        }    
+        }
 
         form.reset()
         const email = document.querySelector("#email");
@@ -132,5 +132,5 @@ form.addEventListener('submit', e => {
         phone.classList.remove("is-valid")
     }
 })
-      
+
 
